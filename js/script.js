@@ -73,3 +73,39 @@ function getCheese(runningTotal,text1,text2) {
     text2 = text2 + cheeseTotal + "<br>";
     getMeat(runningTotal,text1,text2);
 };
+function getMeat(runningTotal,text1,text2) {
+    var meatTotal = 0;
+    var selectedMeat = [];
+    var meatArray = document.getElementsByClassName("meat");
+    for (var j = 0; j < meatArray.length; j++) {
+        if (meatArray[j].checked) {
+            selectedMeat.push(meatArray[j].value);
+        }
+    }
+    var meatCount = selectedMeat.length;
+    if (meatCount > 1) {
+        meatTotal = (meatCount - 1);
+    } else {
+        meatTotal = 0;
+    }
+    runningTotal = (runningTotal + meatTotal);
+    for (var j = 0; j < selectedMeat.length; j++) {
+        text1 = text1+selectedMeat[j]+"<br>";
+        if (meatCount <= 1) {
+                text2 = text2 + 0 + "<br>";
+                meatCount = meatCount - 1;
+            } else if (meatCount == 2) {
+                text2 = text2 + 1 + "<br>";
+                meatCount = meatCount - 1;
+            } else {
+                text2 = text2 + 1 + "<br>";
+                meatCount = meatCount - 1;
+            }
+    }
+    getVeggie(runningTotal,text1,text2);
+};
+
+function getVeggie(runningTotal,text1,text2) {
+    var veggieTotal = 0;
+    var selectedVeggie 
+""

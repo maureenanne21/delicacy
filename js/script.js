@@ -25,4 +25,21 @@ function getReceipt() {
     }
     runningTotal = sizeTotal;
     getCrust(runningTotal,text1,text2);
-};gi
+};
+function getCrust(runningTotal,text1,text2) {
+    var crustTotal = 0;
+    var selectedCrust;
+    var crustArray = document.getElementsByClassName("crust");
+    for (var j = 0; j < crustArray.length; j++) {
+        if (crustArray[j].checked) {
+            selectedCrust = crustArray[j].value;
+            text1 = text1 + selectedCrust + "<br>";
+        }
+        if (selectedCrust === "Cheese Stuffed Crust") {
+            crustTotal = 3;
+        }
+    }
+    runningTotal = (runningTotal + crustTotal);
+    text2 = text2 + crustTotal + "<br>";
+    getSauce(runningTotal,text1,text2);
+};

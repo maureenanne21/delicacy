@@ -43,3 +43,33 @@ function getCrust(runningTotal,text1,text2) {
     text2 = text2 + crustTotal + "<br>";
     getSauce(runningTotal,text1,text2);
 };
+function getSauce(runningTotal,text1,text2) {
+    var selectedSauce;
+    var sauceArray = document.getElementsByClassName("sauce");
+    for (var j = 0; j < sauceArray.length; j++) {
+        if (sauceArray[j].checked) {
+            selectedSauce = sauceArray[j].value;
+            text1 = text1 + selectedSauce + "<br>";
+        }
+    }
+    text2 = text2 + 0 + "<br>";
+    getCheese(runningTotal,text1,text2);
+};
+
+function getCheese(runningTotal,text1,text2) {
+    var cheeseTotal = 0;
+    var selectedCheese;
+    var cheeseArray = document.getElementsByClassName("cheese");
+    for (var j = 0; j < cheeseArray.length; j++) {
+        if (cheeseArray[j].checked) {
+            selectedCheese = cheeseArray[j].value;
+            text1 = text1 + selectedCheese + "<br>";
+        }
+        if (selectedCheese === "Extra Cheese") {
+            cheeseTotal = 3;
+        }
+    }
+    runningTotal = (runningTotal + cheeseTotal);
+    text2 = text2 + cheeseTotal + "<br>";
+    getMeat(runningTotal,text1,text2);
+};

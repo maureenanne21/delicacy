@@ -12,7 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <link href="./css/style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Pizza Palace</title>
 </head>
 <body>
@@ -48,17 +48,17 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="./Pizza/images/pizza7.jpg" class="d-block w-100" alt="..." style="height: 40em;">
+              <img src="./pizza/images/pizza7.jpg" class="d-block w-100" alt="..." style="height: 40em;">
               <div class="carousel-caption d-none d-md-block" style="padding-bottom: 7em;">
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./Pizza/images/pizza8.jpg" class="d-block w-100" alt="..." style="height: 40em;">
+              <img src="./pizza/images/pizza8.jpg" class="d-block w-100" alt="..." style="height: 40em;">
               <div class="carousel-caption d-none d-md-block" style="padding-bottom: 7em;">
               </div>
             </div>
             <div class="carousel-item">
-              <img src="./Pizza/images/pizza4.jpg" class="d-block w-100" alt="..." style="height: 40em;">
+              <img src="./pizza/images/pizza4.jpg" class="d-block w-100" alt="..." style="height: 40em;">
               <div class="carousel-caption d-none d-md-block" style="padding-bottom: 7em;">
               </div>
             </div>
@@ -66,6 +66,36 @@
         </div>
         </section>
                   <div class="container-fluid" style="margin-top: 0;">
+                    <section class="container">
+                        <div id="menu-all">
+                            <h1>Menu</h1>
+                            <form id="form">
+                                <div class="menu-item">
+                                    <h3>Size:</h3>
+                                    <input class="size" type="radio" name="Size" value="Personal Pizza"> Personal - kshs 600*
+                                    <br>
+                                    <input class="size" type="radio" name="Size" value="Medium Pizza"> Medium - kshs 800*
+                                    <br>
+                                    <input class="size" type="radio" name="Size" value="Large Pizza" checked> Large - ksh 1000*
+                                    <br>
+                                    <input class="size" type="radio" name="Size" value="Extra Large Pizza"> Extra Large - kshs 1200*
+                                    <br>
+                                    <p>* = Base price before ingredients</p>
+                                </div>
+                                <div class="menu-item">
+                                  <h3>Crust:</h3>
+                                  <input class="crust" type="radio" name="Crust" value="Plain Crust" checked> Plain
+                                  <br>
+                                  <input class="crust" type="radio" name="Crust" value="Spicy Crust"> Spicy
+                                  <br>
+                                  <input class="crust" type="radio" name="Crust" value="House Special Crust"> House Special
+                                  <br>
+                                  <input class="crust" type="radio" name="Crust" value="Garlic Butter Crust"> Garlic Butter
+                                  <br>
+                                  <input class="crust" type="radio" name="Crust" value="Cheese Stuffed Crust"> Cheese Stuffed*
+                                  <br>
+                                  <p>* = Add kshs 300 for any size pizza</p>
+                                </div>
             
         
 
